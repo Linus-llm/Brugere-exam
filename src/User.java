@@ -4,10 +4,10 @@ import java.util.Collections;
 import java.util.List;
 
 public class User {
-    String name;
-    String password;
-    String email;
-    String phoneNumber;
+    private String name;
+    private String password;
+    private String email;
+    private String phoneNumber;
 
     public User(String name, String password) {
         if(name.length()<12||Character.isLowerCase(name.charAt(0))){
@@ -71,11 +71,12 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    ArrayList<String> attributesToBePrinted = new ArrayList<>();
+
 
 
     @Override
     public String toString() {
+        ArrayList<String> attributesToBePrinted = new ArrayList<>();
         String resultString = "";
         attributesToBePrinted.add(this.name);
         attributesToBePrinted.add(this.password);
